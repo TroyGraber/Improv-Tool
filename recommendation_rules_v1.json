@@ -1,0 +1,636 @@
+{
+  "rulesName": "Flying Pig Activity Recommendation Rules",
+  "version": "1.0.0",
+  "generatedDate": "2026-06-08",
+  "intendedUse": "Client-side recommendation logic for the future self-contained Flying Pig improv activity HTML tool.",
+  "dependsOn": {
+    "activityDataset": "flying_pig_activity_dataset_v1.json",
+    "metadataTable": "flying_pig_activity_metadata_reviewed_v2.csv"
+  },
+  "selectionModel": {
+    "primaryApproach": "slot_based_weighted_random",
+    "description": "Each recommendation mode defines a structured lineup with slots. Each slot builds an eligible candidate pool, scores candidates using mode-specific weights, then randomly selects from the high-scoring candidates while enforcing global constraints.",
+    "defaultRandomization": "rotating_recommendations",
+    "sameInputSameOutput": false,
+    "candidateSelection": {
+      "scoreCandidates": true,
+      "eligiblePoolFirst": true,
+      "randomizeAmongHighScorers": true,
+      "highScoreBand": "top_30_percent_or_within_15_points_of_best_candidate",
+      "avoidRecentlyUsedWithinSameLineup": true
+    },
+    "regenerateBehavior": {
+      "enabled": true,
+      "scope": "single_slot",
+      "replacementRule": "preserve_broad_slot_role",
+      "respectGlobalConstraints": true,
+      "examples": {
+        "longFormSlot": "replace with another eligible long-form",
+        "guessingGameSlot": "replace with another guessing game",
+        "showFinalSlot": "replace only with Oh Waiter or Conducted Song",
+        "beginnerCircleGameSlot": "replace with another beginner-eligible circle game or low-risk exercise of comparable difficulty",
+        "beginnerCapstoneSlot": "replace only with 3-Line Scenes or I Am a Tree",
+        "beginnerCloserSlot": "replace only with Five Things or Name Game",
+        "advancedCloserSlot": "replace only with Five Things",
+        "advancedShortFormSlot": "replace with another advanced-eligible short-form game or technical rep"
+      }
+    },
+    "transparency": {
+      "showReasonTags": true,
+      "reasonTagStyle": "brief_inline_tags_under_activity",
+      "examples": [
+        "beginner-eligible",
+        "circle game",
+        "listening",
+        "no props",
+        "show-suitable",
+        "guessing game",
+        "long-form slot",
+        "closer"
+      ]
+    }
+  },
+  "globalActivityOverrides": {
+    "fixedClassOpeners": [
+      "jesses-opening-meditation",
+      "zip-zap-zop"
+    ],
+    "guessingGames": [
+      "why-were-you-late",
+      "the-dating-game",
+      "job-interview",
+      "home-shopping-network-hsn",
+      "detective"
+    ],
+    "notGuessingGames": [
+      "foreign-film",
+      "three-headed-expert"
+    ],
+    "audienceVolunteerGames": [
+      "pillars"
+    ],
+    "notAudienceVolunteerGames": [
+      "lines-from-a-box",
+      "town-hall",
+      "slideshow"
+    ],
+    "beginnerCapstones": [
+      "3-line-scenes",
+      "i-am-a-tree"
+    ],
+    "beginnerClosers": [
+      "five-things",
+      "name-game"
+    ],
+    "advancedCloser": "five-things",
+    "preferredShowOpeners": [
+      "four-square"
+    ],
+    "showLongForms": [
+      "montage",
+      "town-hall",
+      "french-braid",
+      "slacker",
+      "repeater",
+      "growing-and-shrinking",
+      "two-chairs"
+    ],
+    "advancedLongForms": [
+      "montage",
+      "town-hall",
+      "repeater",
+      "la-ronde",
+      "french-braid",
+      "slacker",
+      "two-chairs",
+      "growing-and-shrinking"
+    ],
+    "longFormPlacementSpecialCases": {
+      "town-hall": "show_opener"
+    },
+    "confirmedShortFormNotLongForm": [
+      "four-square"
+    ],
+    "beginnerAlwaysExclude": [
+      "one-minute-scenes",
+      "5-second-delay"
+    ],
+    "removedFromCatalogAndRecommendations": [
+      "existential-crisis-opening",
+      "existential-crisis-closing"
+    ],
+    "needsFutureRuleReview": [
+      {
+        "id": "la-ronde",
+        "reason": "Included in advanced long-form rotation from dataset. Not included in the explicitly confirmed show long-form pool during scoring discussion."
+      }
+    ],
+    "showFillerGames": [
+      "oh-waiter",
+      "worlds-worst"
+    ]
+  },
+  "scoreWeights": {
+    "common": {
+      "exactSlotRoleMatch": 30,
+      "strongSuitabilityForMode": 25,
+      "acceptableSuitabilityForMode": 10,
+      "clearFlyingPigDocumentation": 10,
+      "noPropsWhenPropsNotNeeded": 5,
+      "matchesDesiredEnergy": 8,
+      "matchesDesiredDifficulty": 12,
+      "supportsLineupVariety": 12,
+      "duplicateSkillFamilyPenalty": -8,
+      "violatesSoftPreferencePenalty": -15,
+      "violatesHardConstraint": -9999
+    },
+    "beginnerClass": {
+      "circleGameOrWholeGroup": 30,
+      "warmupOrFocusExercise": 25,
+      "easyDifficulty": 20,
+      "moderateDifficulty": 8,
+      "highDifficultyPenalty": -9999,
+      "shortFormShowGamePenalty": -9999,
+      "oneMinuteScenesPenalty": -9999,
+      "simpleListeningAgreementFocus": 20,
+      "lowRiskFailureRecovery": 18,
+      "physicalOrVerbalVarietyBonus": 8,
+      "stageHeavyPenalty": -25,
+      "trustRequiredPenalty": -6
+    },
+    "advancedClass": {
+      "advancedSuitability": 25,
+      "showGameOrTechnicalRep": 18,
+      "practiceOnlyTechnicalValue": 18,
+      "relationshipEmotionCharacterBonus": 12,
+      "physicalCommitmentBonus": 10,
+      "hardDifficultyAllowedBonus": 8,
+      "hardDifficultyAfterLimitPenalty": -25,
+      "longFormSlotBonus": 30,
+      "skillVarietyBonus": 10,
+      "guessingGameAfterLimitPenalty": -9999
+    },
+    "show": {
+      "showSuitabilityStrong": 30,
+      "clearAudienceMechanics": 20,
+      "hostStructureReadable": 12,
+      "formatVarietyBonus": 15,
+      "preferredOpenerBonus": 15,
+      "guessingGameSlotBonus": 30,
+      "longFormSlotBonus": 30,
+      "finalGameSlotBonus": 30,
+      "highRiskAfterLimitPenalty": -9999,
+      "secondGuessingGamePenalty": -9999,
+      "secondAudienceVolunteerPenalty": -9999,
+      "complexOrSlowOpenerPenalty": -20,
+      "similarMechanicsBackToBackPenalty": -15
+    }
+  },
+  "recommendationModes": {
+    "beginnerClass": {
+      "label": "Beginner Class",
+      "defaultDurationMinutes": 90,
+      "outputType": "balanced_lineup",
+      "fixedOpeningSequence": [
+        {
+          "slotId": "opening_ritual",
+          "activityId": "jesses-opening-meditation",
+          "locked": true,
+          "reasonTags": [
+            "fixed class opening",
+            "Flying Pig / Jesse ritual",
+            "presence",
+            "risk readiness"
+          ]
+        },
+        {
+          "slotId": "zip_zap_zop",
+          "activityId": "zip-zap-zop",
+          "locked": true,
+          "variantGuidance": "Beginner classes usually use standard Zip Zap Zop.",
+          "reasonTags": [
+            "fixed class warmup",
+            "circle game",
+            "focus",
+            "eye contact"
+          ]
+        }
+      ],
+      "lineupStructure": [
+        {
+          "slotId": "beginner_early_exercises",
+          "slotLabel": "Early exercises",
+          "countRange": [
+            1,
+            3
+          ],
+          "candidateRule": "beginnerClassSuitability_Early",
+          "orderRule": "any",
+          "regeneratable": true
+        },
+        {
+          "slotId": "beginner_mid_exercises",
+          "slotLabel": "Mid exercises",
+          "countRange": [
+            1,
+            3
+          ],
+          "candidateRule": "beginnerClassSuitability_Mid",
+          "orderRule": "any",
+          "regeneratable": true
+        },
+        {
+          "slotId": "beginner_late_exercises",
+          "slotLabel": "Late exercises",
+          "countRange": [
+            1,
+            3
+          ],
+          "candidateRule": "beginnerClassSuitability_Late",
+          "orderRule": "any",
+          "regeneratable": true
+        },
+        {
+          "slotId": "beginner_capstone",
+          "slotLabel": "Capstone exercise",
+          "count": 1,
+          "candidatePool": [
+            "3-line-scenes",
+            "i-am-a-tree"
+          ],
+          "candidateRule": "beginnerClassSuitability_Capstone",
+          "selectionWeighting": "equal_rotation",
+          "regeneratable": true
+        },
+        {
+          "slotId": "beginner_closer",
+          "slotLabel": "Closer",
+          "count": 1,
+          "candidatePool": [
+            "five-things",
+            "name-game"
+          ],
+          "candidateRule": "beginnerClassSuitability_Closer",
+          "selectionWeighting": "equal_rotation",
+          "regeneratable": true
+        }
+      ],
+      "hardConstraints": {
+        "alwaysStartWithMeditationThenZipZapZop": true,
+        "excludeAllShortFormShowGamesByDefault": true,
+        "excludeOneMinuteScenes": false,
+        "excludeAdvancedOnlyExercises": true,
+        "mustIncludeCapstone": true,
+        "mustIncludeCloser": true,
+        "maxModerateActivities": 2,
+        "maxHardActivities": 0,
+        "structuredTierProgression": true,
+        "capstoneAlwaysBeforeCloser": true,
+        "maxEarlyMidLate": 6,
+        "minEarlyMidLate": 6
+      },
+      "softPreferences": {
+        "preferCircleGames": true,
+        "preferWarmupsFocusSentenceStoryExercises": true,
+        "preferLowRiskFailureRecovery": true,
+        "lightDuplicationControlAcrossSkillFamilies": true,
+        "someOverlapAllowed": true,
+        "avoidTooManyOneWordSentenceGames": true,
+        "energyPattern": "easy_to_harder_with_light_energy_balance"
+      },
+      "candidateFilters": {
+        "includeFormatRoles": [
+          "Warmup / Focus Exercise",
+          "Exercise",
+          "Closer"
+        ],
+        "excludeCategories": [
+          "Short Form Games",
+          "Long Form Structures and Techniques",
+          "Show Openings and Closings"
+        ],
+        "excludeActivityIds": [
+          "one-minute-scenes",
+          "5-second-delay"
+        ],
+        "includeIfBeginnerSuitabilityContainsAny": [
+          "Early",
+          "Mid",
+          "Late",
+          "Capstone",
+          "Closer"
+        ]
+      }
+    },
+    "advancedClass": {
+      "label": "Advanced Class",
+      "defaultDurationMinutes": 150,
+      "outputType": "balanced_lineup",
+      "fixedOpeningSequence": [
+        {
+          "slotId": "opening_ritual",
+          "activityId": "jesses-opening-meditation",
+          "locked": true,
+          "reasonTags": [
+            "fixed class opening",
+            "Flying Pig / Jesse ritual",
+            "presence"
+          ]
+        },
+        {
+          "slotId": "zip_zap_zop_variant",
+          "activityId": "zip-zap-zop",
+          "locked": true,
+          "variantGuidance": "Advanced classes often move quickly from standard Zip Zap Zop into a variant such as reverse or phonetic substitutions.",
+          "reasonTags": [
+            "fixed class warmup",
+            "variant-ready",
+            "focus",
+            "speed"
+          ]
+        }
+      ],
+      "lineupStructure": [
+        {
+          "slotId": "advanced_warmup",
+          "slotLabel": "Additional warmup",
+          "countRange": [
+            1,
+            2
+          ],
+          "candidateRule": "advancedClassSuitability_Warmup",
+          "regeneratable": true
+        },
+        {
+          "slotId": "advanced_skills",
+          "slotLabel": "Skills / technical drills",
+          "countRange": [
+            1,
+            3
+          ],
+          "candidateRule": "advancedClassSuitability_Skills",
+          "regeneratable": true
+        },
+        {
+          "slotId": "advanced_shortform",
+          "slotLabel": "Short-form games",
+          "countRange": [
+            2,
+            4
+          ],
+          "candidateRule": "advancedClassSuitability_Shortform",
+          "regeneratable": true,
+          "maxCombinedWithSkills": 6
+        },
+        {
+          "slotId": "advanced_longform",
+          "slotLabel": "Required long-form structure",
+          "count": 1,
+          "candidatePool": [
+            "montage",
+            "town-hall",
+            "repeater",
+            "la-ronde",
+            "french-braid",
+            "slacker",
+            "two-chairs",
+            "growing-and-shrinking"
+          ],
+          "candidateRule": "advancedClassSuitability_Longform",
+          "selectionWeighting": "equal_rotation",
+          "placement": "near_end",
+          "regeneratable": true
+        },
+        {
+          "slotId": "advanced_closer",
+          "slotLabel": "Closer",
+          "count": 1,
+          "candidatePool": [
+            "five-things"
+          ],
+          "lockedActivityId": "five-things",
+          "regeneratable": false
+        }
+      ],
+      "hardConstraints": {
+        "alwaysStartWithMeditationThenZipZapZop": true,
+        "zipZapZopShouldUseVariantQuickly": true,
+        "mustIncludeAtLeastOneLongForm": true,
+        "longFormNearEnd": true,
+        "afterLongFormGoDirectlyToFiveThings": true,
+        "mustEndWithFiveThings": true,
+        "maxGuessingGames": 1,
+        "maxHardShortFormOrTechnicalActivities": 3,
+        "requiredLongFormDoesNotCountAgainstHardLimit": true,
+        "maxSkillsPlusShortform": 6
+      },
+      "softPreferences": {
+        "preferSkillVariety": true,
+        "allowFocusedSkillRepetition": true,
+        "mixShowGamesAndPracticeExercises": true,
+        "avoidAccidentalMonotony": true,
+        "balanceHardGamesWithCleanerReps": true
+      },
+      "candidateFilters": {
+        "includeIfAdvancedSuitabilityContainsAny": [
+          "Warmup",
+          "Skills",
+          "Shortform",
+          "Longform",
+          "Closer"
+        ],
+        "shortFormTechnicalSlotMayIncludeFormatRoles": [
+          "Short Form",
+          "Exercise",
+          "Warmup / Focus Exercise"
+        ],
+        "excludeActivityIdsFromShortFormTechnicalSlot": [
+          "jesses-opening-meditation",
+          "zip-zap-zop",
+          "five-things",
+          "name-game"
+        ]
+      }
+    },
+    "show": {
+      "label": "Show",
+      "defaultDurationMinutes": 75,
+      "outputType": "full_show_lineup",
+      "formalOpening": {
+        "includeOpeningSlot": true,
+        "treatAsCatalogActivity": false,
+        "description": "Always include a formal opening / host-framing slot. This is not a catalog activity and should not be scored as one."
+      },
+      "lineupStructure": [
+        {
+          "slotId": "show_short_form_before_guessing",
+          "slotLabel": "Short-form games",
+          "countRange": [
+            2,
+            3
+          ],
+          "candidateRule": "show_suitable_shortform",
+          "regeneratable": true
+        },
+        {
+          "slotId": "show_required_guessing_game",
+          "slotLabel": "Guessing game (required)",
+          "count": 1,
+          "candidatePool": [
+            "why-were-you-late",
+            "the-dating-game",
+            "job-interview",
+            "home-shopping-network-hsn"
+          ],
+          "selectionWeighting": "equal_rotation",
+          "regeneratable": true
+        },
+        {
+          "slotId": "show_short_form_after_guessing",
+          "slotLabel": "Short-form games",
+          "countRange": [
+            1,
+            2
+          ],
+          "candidateRule": "show_suitable_shortform",
+          "regeneratable": true
+        },
+        {
+          "slotId": "show_required_long_form",
+          "slotLabel": "Long-form (last game)",
+          "count": 1,
+          "candidatePool": [
+            "montage",
+            "town-hall",
+            "french-braid",
+            "slacker",
+            "repeater",
+            "growing-and-shrinking",
+            "two-chairs"
+          ],
+          "selectionWeighting": "equal_rotation",
+          "placement": "last_game_before_filler",
+          "regeneratable": true
+        },
+        {
+          "slotId": "show_filler",
+          "slotLabel": "Filler (cut if running long)",
+          "count": 1,
+          "candidatePool": [
+            "oh-waiter",
+            "worlds-worst"
+          ],
+          "note": "Always planned; cut on the night if behind schedule.",
+          "optional": true,
+          "regeneratable": true
+        },
+        {
+          "slotId": "show_conducted_song",
+          "slotLabel": "Conducted Song (optional — ~1 in 4 shows)",
+          "count": 1,
+          "candidatePool": [
+            "conducted-song-show-closing-conducted-song"
+          ],
+          "optional": true,
+          "inclusionProbability": 0.25,
+          "regeneratable": false
+        }
+      ],
+      "hardConstraints": {
+        "mustIncludeFormalOpeningSlot": true,
+        "mustIncludeFormalClosingSlot": true,
+        "mustIncludeExactlyOneGuessingGame": true,
+        "mustIncludeAtLeastOneLongForm": true,
+        "townHallOpensBeforeFormalOpening": true,
+        "townHallShowHasNoSecondLongForm": true,
+        "fillerAlwaysAfterLongForm": true,
+        "conductedSongBetweenLastGameAndClosing": true,
+        "maxGuessingGames": 1,
+        "foreignFilmDoesNotCountAsGuessing": true,
+        "threeHeadedExpertDoesNotCountAsGuessing": true,
+        "fourSquareCountsAsShortForm": true
+      },
+      "softPreferences": {
+        "requireFormatVarietyAcrossShortFormGames": true,
+        "avoidComplexOrSlowGamesFirst": true,
+        "favorClearMechanicsEarly": true,
+        "fourSquareIsStrongOpenerCandidateButNotForced": true,
+        "avoidSimilarAudienceMechanicsBackToBack": true,
+        "balanceRiskyGamesWithReliableAudienceReadableGames": true
+      },
+      "formatVarietyTargets": [
+        "quick_joke_or_line_game",
+        "physical_or_visual_game",
+        "structured_hosted_game",
+        "verbal_or_constraint_game",
+        "exactly_one_guessing_game",
+        "optional_final_filler_or_song_closer",
+        "required_long_form"
+      ],
+      "candidateFilters": {
+        "includeIfShowSuitabilityContainsAny": [
+          "Yes",
+          "Good",
+          "Strong"
+        ],
+        "shortFormSlotIncludeFormatRoles": [
+          "Short Form"
+        ],
+        "longFormSlotCandidatePoolIsExplicit": true,
+        "finalGameSlotCandidatePoolIsExplicit": true
+      }
+    }
+  },
+  "reasonTagGeneration": {
+    "tagSourcesInPriorityOrder": [
+      "slotRole",
+      "modeSuitability",
+      "formatRole",
+      "category",
+      "coreSkills",
+      "constraintFlags",
+      "propsFlags",
+      "difficulty",
+      "energyLevel"
+    ],
+    "maxReasonTagsPerActivity": 5,
+    "examples": {
+      "beginnerWarmup": [
+        "beginner-eligible",
+        "circle game",
+        "focus",
+        "low risk",
+        "no props"
+      ],
+      "advancedShortForm": [
+        "advanced class",
+        "short-form rep",
+        "verbal agility",
+        "show-suitable"
+      ],
+      "showGuessingGame": [
+        "required guessing game",
+        "audience-readable",
+        "host structure",
+        "show-suitable"
+      ],
+      "showLongForm": [
+        "required long-form",
+        "late-show structure",
+        "ensemble tracking"
+      ],
+      "showFinalGame": [
+        "show closer",
+        "final-game pool",
+        "high energy"
+      ]
+    }
+  },
+  "implementationNotes": [
+    "The rules file intentionally separates recommendation logic from the full catalog text.",
+    "Inferred scoring fields should not be displayed as Flying Pig facts unless they come directly from the catalog or reviewed metadata.",
+    "Slot regeneration should recalculate constraints after replacement rather than blindly swapping activities.",
+    "If no eligible candidate remains for a slot, the HTML should relax soft preferences before violating hard constraints.",
+    "The first HTML prototype can embed this JSON directly in a script tag alongside the activity dataset."
+  ]
+}

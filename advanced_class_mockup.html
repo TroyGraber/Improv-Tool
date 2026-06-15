@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Advanced Class — Full 6-Panel Mockup</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #d0d0d0;
+    padding: 20px;
+  }
+
+  .screen-header {
+    margin-bottom: 12px;
+  }
+  .screen-header h1 {
+    font-size: 14px;
+    color: #222;
+    margin-bottom: 4px;
+  }
+  .screen-header p {
+    font-size: 11px;
+    color: #555;
+    margin-bottom: 8px;
+  }
+  .btn {
+    padding: 7px 14px;
+    background: #444;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 11px;
+    border-radius: 3px;
+    margin-right: 8px;
+  }
+
+  /* ── Page grid ── */
+  .page {
+    display: grid;
+    grid-template-columns: 3.9in 3.9in;
+    grid-template-rows: 3.25in 3.25in 3.25in;
+    gap: 1px;
+    background: #888;
+    width: fit-content;
+  }
+
+  /* ── Individual panel ── */
+  .panel {
+    background: white;
+    padding: 0.08in;
+    overflow: hidden;
+    position: relative;
+    height: 3.25in;
+  }
+
+  /* Panel position labels (screen only) */
+  .panel-label {
+    position: absolute;
+    top: 2px;
+    right: 4px;
+    font-size: 6pt;
+    color: #bbb;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  /* ── Typography ── */
+  .panel-title {
+    font-size: 8pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #222;
+    border-bottom: 1pt solid #333;
+    padding-bottom: 2pt;
+    margin-bottom: 4pt;
+  }
+
+  .panel-subtitle {
+    font-size: 7pt;
+    color: #666;
+    margin-bottom: 4pt;
+  }
+
+  .section-head {
+    font-size: 6.5pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #444;
+    border-bottom: 0.3pt solid #bbb;
+    margin-top: 5pt;
+    margin-bottom: 2pt;
+  }
+  .section-head:first-of-type { margin-top: 0; }
+
+  /* Numbered activity rows */
+  .activity {
+    margin-bottom: 3pt;
+  }
+  .activity-name {
+    font-size: 8pt;
+    font-weight: bold;
+    color: #111;
+    line-height: 1.2;
+  }
+  .activity-desc {
+    font-size: 7pt;
+    color: #444;
+    line-height: 1.25;
+    padding-left: 10pt;
+  }
+  .activity-tags {
+    font-size: 6.5pt;
+    color: #888;
+    line-height: 1.2;
+    padding-left: 10pt;
+    font-style: italic;
+  }
+
+  /* Alternatives list */
+  .alt-item {
+    font-size: 7.5pt;
+    line-height: 1.3;
+    color: #222;
+    padding-left: 6pt;
+  }
+
+  /* Things to Look For */
+  .look-row {
+    margin-bottom: 3pt;
+  }
+  .look-game {
+    font-size: 7.5pt;
+    font-weight: bold;
+    color: #222;
+    line-height: 1.2;
+  }
+  .look-cues {
+    font-size: 7pt;
+    color: #555;
+    padding-left: 8pt;
+    line-height: 1.2;
+  }
+
+  /* Game reference panels */
+  .ref-columns {
+    display: flex;
+    gap: 0.1in;
+  }
+  .ref-col { flex: 1; }
+  .ref-cat {
+    font-size: 6.5pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+    border-bottom: 0.3pt solid #ccc;
+    margin-top: 2pt;
+    margin-bottom: 1pt;
+  }
+  .ref-cat:first-child { margin-top: 0; }
+  .ref-game {
+    font-size: 8pt;
+    line-height: 1.15;
+    color: #111;
+    padding-left: 4pt;
+  }
+
+  /* Two-column layout for panels 1–4 when needed */
+  .two-col {
+    display: flex;
+    gap: 0.1in;
+  }
+  .two-col > div { flex: 1; }
+
+  /* ── Print ── */
+  @media print {
+    body { background: white; padding: 0; margin: 0; }
+    .screen-header { display: none; }
+    .page {
+      gap: 0;
+      background: none;
+    }
+    .panel {
+      border: 0.4pt solid #aaa;
+      page-break-inside: avoid;
+    }
+    .panel-label { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="screen-header">
+  <h1>Advanced Class — Full 6-Panel Print Mockup</h1>
+  <p>2×3 grid · each panel 3.9" × 3.25" · front side of sheet · fold in thirds, then in half</p>
+  <button class="btn" onclick="window.print()">🖨 Print</button>
+</div>
+
+<div class="page">
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- PANEL 1 — Header + Opening                  -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div class="panel">
+    <div class="panel-label">1 of 6</div>
+    <div class="panel-title">Advanced Class &nbsp;·&nbsp; June 9, 2026</div>
+    <div class="panel-subtitle">Flying Pig Improv &nbsp;·&nbsp; ~2.5 hours</div>
+
+    <div class="section-head">Opening</div>
+
+    <div class="activity">
+      <div class="activity-name">1. Jesse's Opening Meditation</div>
+      <div class="activity-desc">Breath from belly · eyes closed · grounding cord to earth · body scan toes → fingertips</div>
+      <div class="activity-desc">Agreement 1: Take a risk &nbsp;·&nbsp; Agreement 2: Release judgment of others</div>
+      <div class="activity-desc">Agreement 3: Release judgment of yourself (Jesse: hardest one)</div>
+      <div class="activity-desc">3 rounds: inhale → hands high → exhale with audible sigh · open eyes</div>
+      <div class="activity-tags">presence · risk readiness · class container &nbsp;·&nbsp; 8–18 min</div>
+    </div>
+
+    <div class="section-head">Warmup</div>
+
+    <div class="activity">
+      <div class="activity-name">2. Zip Zap Zop</div>
+      <div class="activity-desc">Standard → move quickly to reverse or phonetic variant</div>
+      <div class="activity-tags">focus · eye contact · speed · variant-ready &nbsp;·&nbsp; 3–10 min</div>
+    </div>
+
+    <div class="activity">
+      <div class="activity-name">3. Bunny Bunny</div>
+      <div class="activity-desc">Circle — rhythm, physical commitment, recovery from error</div>
+      <div class="activity-tags">energy · commitment · recovery &nbsp;·&nbsp; 3–10 min</div>
+    </div>
+
+    <div class="activity">
+      <div class="activity-name">4. Mind Meld</div>
+      <div class="activity-desc">Pairs — say words simultaneously, try to converge to the same word</div>
+      <div class="activity-tags">association · convergence · shared attention &nbsp;·&nbsp; 5–10 min</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- PANEL 2 — Short Form + Long Form + Closer   -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div class="panel">
+    <div class="panel-label">2 of 6</div>
+    <div class="panel-title">Advanced Class &nbsp;·&nbsp; June 9, 2026 (cont.)</div>
+
+    <div class="section-head">Short Form / Technical Reps</div>
+
+    <div class="activity">
+      <div class="activity-name">5. Four Square</div>
+      <div class="activity-desc">4 players + host. Maintain 4 scenes, rotate and blend on host call</div>
+      <div class="activity-tags">scene memory · context switching · relationship tracking</div>
+    </div>
+
+    <div class="activity">
+      <div class="activity-name">6. Freeze Tag</div>
+      <div class="activity-desc">Both frozen players replaced — justify new scene from frozen position</div>
+      <div class="activity-tags">physical initiation · justification · scene edits</div>
+    </div>
+
+    <div class="activity">
+      <div class="activity-name">7. Foreign Film</div>
+      <div class="activity-desc">Gibberish scene + live translator — emotional intent carries the scene</div>
+      <div class="activity-tags">gibberish · translation · emotional commitment</div>
+    </div>
+
+    <div class="activity">
+      <div class="activity-name">8. Story, Story, Die!</div>
+      <div class="activity-desc">Director points — instant continuation or you're eliminated</div>
+      <div class="activity-tags">narrative pressure · instant response · playful failure</div>
+    </div>
+
+    <div class="section-head">Long Form</div>
+
+    <div class="activity">
+      <div class="activity-name">9. Montage</div>
+      <div class="activity-desc">Ensemble-built scenes woven from a shared opening theme</div>
+      <div class="activity-tags">required long-form · ensemble tracking · late-show structure</div>
+    </div>
+
+    <div class="section-head">Closer</div>
+
+    <div class="activity">
+      <div class="activity-name">10. Five Things</div>
+      <div class="activity-desc">Circle — one player, fast list, whole group cheers every item</div>
+      <div class="activity-tags">required closer · confidence · speed · group support</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- PANEL 3 — Skill Focus (first half)          -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div class="panel">
+    <div class="panel-label">3 of 6</div>
+    <div class="panel-title">Skill Focus</div>
+
+    <div class="look-row">
+      <div class="look-game">Jesse's Opening Meditation</div>
+      <div class="look-cues">Genuine stillness and full breath. Watch for the group actually settling — not just going quiet. Agreements should land, not just be recited.</div>
+    </div>
+    <div class="look-row">
+      <div class="look-game">Zip Zap Zop</div>
+      <div class="look-cues">Eye contact before the throw, not after. Clean receipt before passing on. Speed without sloppiness. In variants, watch for clean transitions rather than confusion masking as energy.</div>
+    </div>
+    <div class="look-row">
+      <div class="look-game">Bunny Bunny</div>
+      <div class="look-cues">Full physical commitment to the bit — no half-gestures. Rhythm staying intact under pressure. Recovery from errors without self-judgment or apologizing to the circle.</div>
+    </div>
+    <div class="look-row">
+      <div class="look-game">Mind Meld</div>
+      <div class="look-cues">Speed of association without overthinking. Willingness to converge toward a partner. No editing the first instinct — the unfiltered word is the point.</div>
+    </div>
+    <div class="look-row">
+      <div class="look-game">Four Square</div>
+      <div class="look-cues">Consistent relationships within each scene across rotations. Clean context switches — no bleed between squares. Scene memory staying accurate, not drifting over time.</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- PANEL 4 — Skill Focus (second half)         -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div class="panel">
+    <div class="panel-label">4 of 6</div>
+    <div class="panel-title">Skill Focus (cont.)</div>
+
+    <div class="look-row">
+      <div class="look-game">Freeze Tag</div>
+      <div class="look-cues">Strong, specific body positions worth tagging. Bold justifications that commit to the new scene. Scenes that build enough before being tagged — not constant interruption.</div>
+    </div>
+    <div class="look-row">
+      <div class="look-game">Foreign Film</div>
+      <div class="look-cues">Emotional specificity in gibberish — accent and feeling, not just noise. Translator supporting the scene, not correcting or competing with it. Scene logic staying intact across the language gap.</div>
+    </div>
+    <div class="look-row">
+      <div class="look-game">Story, Story, Die!</div>
+      <div class="look-cues">Immediate pickup with no dead air. Narrative thread staying coherent across handoffs. Graceful elimination — dying is part of the fun, not a failure moment.</div>
+    </div>
+    <div class="look-row">
+      <div class="look-game">Montage</div>
+      <div class="look-cues">Clean edits that don't step on scenes. Thematic callbacks emerging naturally. Ensemble awareness — no one player carrying alone. Transitions building energy rather than breaking it.</div>
+    </div>
+    <div class="look-row">
+      <div class="look-game">Five Things</div>
+      <div class="look-cues">Whole group counting together in unison. No hesitation penalty — speed over perfection. Genuine celebration of every answer, fast or slow. High energy exit that sends people out well.</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- PANEL 5 — Game Reference                    -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div class="panel">
+    <div class="panel-label">5 of 6</div>
+    <div class="panel-title">Game Reference</div>
+    <div class="ref-columns">
+      <div class="ref-col">
+        <div class="ref-cat">Warmups</div>
+        <div class="ref-game">Zip Zap Zop</div>
+        <div class="ref-game">Whiskey Mixers / Mr. Whiskers</div>
+        <div class="ref-game">Ninja Star</div>
+        <div class="ref-game">Pass the Sound</div>
+        <div class="ref-game">Where Have Your Fingers Been</div>
+        <div class="ref-game">Tongue Twisters</div>
+        <div class="ref-game">A to B</div>
+        <div class="ref-game">Bunny Bunny</div>
+        <div class="ref-game">Bibbity Bibbity Bop</div>
+        <div class="ref-game">Zoom, Schwartz, Mafigliano</div>
+        <div class="ref-game">I Like Butts</div>
+        <div class="ref-game">Bad Rap</div>
+        <div class="ref-game">Pass the Clap</div>
+        <div class="ref-game">Pass the Face</div>
+        <div class="ref-game">123454321</div>
+        <div class="ref-game">D'Jever</div>
+        <div class="ref-game">Mind Meld</div>
+      </div>
+      <div class="ref-col">
+        <div class="ref-cat">Closers</div>
+        <div class="ref-game">Five Things</div>
+        <div class="ref-game">Name Game</div>
+        <div class="ref-game">Conducted Song</div>
+
+        <div class="ref-cat">Scene &amp; Character</div>
+        <div class="ref-game">Mirroring</div>
+        <div class="ref-game">I Am a Tree</div>
+        <div class="ref-game">3-Line Scenes</div>
+        <div class="ref-game">One Minute Scenes</div>
+        <div class="ref-game">Pass the Muppet</div>
+        <div class="ref-game">Tell a Story One Word</div>
+        <div class="ref-game">Neverending Story</div>
+        <div class="ref-game">Things a Cowboy Says</div>
+        <div class="ref-game">Space and Object Work</div>
+        <div class="ref-game">5 Second Delay</div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- PANEL 6 — Game Reference (cont.)            -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div class="panel">
+    <div class="panel-label">6 of 6</div>
+    <div class="panel-title">Game Reference (cont.)</div>
+    <div class="ref-columns">
+      <div class="ref-col">
+        <div class="ref-cat">Short Form</div>
+        <div class="ref-game">1 Minute Fairy Tale</div>
+        <div class="ref-game">Why Were You Late?</div>
+        <div class="ref-game">Freeze Tag</div>
+        <div class="ref-game">Story, Story, Die!</div>
+        <div class="ref-game">Four Square</div>
+        <div class="ref-game">Three-Headed Expert</div>
+        <div class="ref-game">Good, Bad, Worse</div>
+        <div class="ref-game">The Dating Game</div>
+        <div class="ref-game">Job Interview</div>
+        <div class="ref-game">Oh Waiter</div>
+        <div class="ref-game">Sit, Stand, Lay</div>
+        <div class="ref-game">Lines from a Box</div>
+        <div class="ref-game">Home Shopping / HSN</div>
+        <div class="ref-game">Alphabet Game</div>
+        <div class="ref-game">Duets</div>
+        <div class="ref-game">Master Debater</div>
+        <div class="ref-game">Spelling Bee</div>
+        <div class="ref-game">Breaking News</div>
+        <div class="ref-game">Pillars</div>
+      </div>
+      <div class="ref-col">
+        <div class="ref-cat">&nbsp;</div>
+        <div class="ref-game">3 Chairs</div>
+        <div class="ref-game">Foreign Film</div>
+        <div class="ref-game">Slideshow</div>
+        <div class="ref-game">Gibberish Switch</div>
+        <div class="ref-game">New Choice</div>
+        <div class="ref-game">Entrances and Exits</div>
+        <div class="ref-game">Number of Words</div>
+        <div class="ref-game">World's Worst</div>
+        <div class="ref-game">Shrinking Scene</div>
+        <div class="ref-game">Growing and Shrinking</div>
+
+        <div class="ref-cat">Long Form</div>
+        <div class="ref-game">Montage</div>
+        <div class="ref-game">Town Hall</div>
+        <div class="ref-game">Repeater</div>
+        <div class="ref-game">La Ronde</div>
+        <div class="ref-game">French Braid</div>
+        <div class="ref-game">Slacker</div>
+        <div class="ref-game">Two Chairs</div>
+
+        <div class="ref-cat">Show</div>
+        <div class="ref-game">Conducted Song</div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end .page -->
+</body>
+</html>

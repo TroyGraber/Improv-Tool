@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Print Panel Density Test — Panels 5 & 6</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #e0e0e0;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #333;
+  }
+
+  .note {
+    font-size: 11px;
+    color: #666;
+    margin-bottom: 16px;
+  }
+
+  .btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 8px 16px;
+    background: #444;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 3px;
+  }
+
+  .panel-row {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .panel {
+    width: 3.9in;
+    height: 3.25in;
+    background: white;
+    border: 1px solid #999;
+    padding: 0.08in;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .panel-title {
+    font-size: 7pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #555;
+    border-bottom: 0.5pt solid #999;
+    padding-bottom: 2pt;
+    margin-bottom: 3pt;
+  }
+
+  .columns {
+    display: flex;
+    gap: 0.1in;
+  }
+
+  .col {
+    flex: 1;
+  }
+
+  .cat-header {
+    font-size: 7pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: #333;
+    margin-top: 4pt;
+    margin-bottom: 1pt;
+    border-bottom: 0.3pt solid #ccc;
+  }
+
+  .cat-header:first-child {
+    margin-top: 0;
+  }
+
+  .game {
+    font-size: 8pt;
+    line-height: 1.25;
+    color: #111;
+    padding-left: 4pt;
+  }
+
+  @media print {
+    body { background: white; padding: 0; }
+    h1, .note, .btn { display: none; }
+    .panel-row { gap: 0; }
+    .panel { border: 0.5pt solid #aaa; page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Print Panel Density Test — Panels 5 &amp; 6</h1>
+<p class="note">Panels are 3.9" × 3.25" to account for printer margins. Font is 8pt. Print to check legibility.</p>
+<button class="btn" onclick="window.print()">🖨 Print Test</button>
+
+<div class="panel-row">
+
+  <!-- PANEL 5 -->
+  <div class="panel">
+    <div class="panel-title">Panel 5 — Game Reference</div>
+    <div class="columns">
+      <div class="col">
+        <div class="cat-header">Warmups</div>
+        <div class="game">Zip Zap Zop</div>
+        <div class="game">Whiskey Mixers / Mr. Whiskers</div>
+        <div class="game">Ninja Star</div>
+        <div class="game">Pass the Sound</div>
+        <div class="game">Where Have Your Fingers Been</div>
+        <div class="game">Tongue Twisters</div>
+        <div class="game">A to B</div>
+        <div class="game">Bunny Bunny</div>
+        <div class="game">Bibbity Bibbity Bop</div>
+        <div class="game">Zoom, Schwartz, Mafigliano</div>
+        <div class="game">I Like Butts</div>
+        <div class="game">Bad Rap</div>
+        <div class="game">Pass the Clap</div>
+        <div class="game">Pass the Face</div>
+        <div class="game">123454321</div>
+        <div class="game">D'Jever</div>
+        <div class="game">Mind Meld</div>
+      </div>
+      <div class="col">
+        <div class="cat-header">Closers</div>
+        <div class="game">Five Things</div>
+        <div class="game">Name Game</div>
+        <div class="game">Conducted Song</div>
+
+        <div class="cat-header">Scene &amp; Character</div>
+        <div class="game">Mirroring</div>
+        <div class="game">I Am a Tree</div>
+        <div class="game">3-Line Scenes</div>
+        <div class="game">One Minute Scenes</div>
+        <div class="game">Pass the Muppet</div>
+        <div class="game">Tell a Story One Word</div>
+        <div class="game">Neverending Story</div>
+        <div class="game">Things a Cowboy Says</div>
+        <div class="game">Space and Object Work</div>
+        <div class="game">5 Second Delay</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PANEL 6 -->
+  <div class="panel">
+    <div class="panel-title">Panel 6 — Game Reference (cont.)</div>
+    <div class="columns">
+      <div class="col">
+        <div class="cat-header">Short Form</div>
+        <div class="game">1 Minute Fairy Tale</div>
+        <div class="game">Why Were You Late?</div>
+        <div class="game">Freeze Tag</div>
+        <div class="game">Story, Story, Die!</div>
+        <div class="game">Four Square</div>
+        <div class="game">Three-Headed Expert</div>
+        <div class="game">Good, Bad, Worse</div>
+        <div class="game">The Dating Game</div>
+        <div class="game">Job Interview</div>
+        <div class="game">Oh Waiter</div>
+        <div class="game">Sit, Stand, Lay</div>
+        <div class="game">Lines from a Box</div>
+        <div class="game">Home Shopping / HSN</div>
+        <div class="game">Alphabet Game</div>
+        <div class="game">Duets</div>
+        <div class="game">Master Debater</div>
+        <div class="game">Spelling Bee</div>
+        <div class="game">Breaking News</div>
+        <div class="game">Pillars</div>
+      </div>
+      <div class="col">
+        <div class="cat-header">&nbsp;</div>
+        <div class="game">3 Chairs</div>
+        <div class="game">Foreign Film</div>
+        <div class="game">Slideshow</div>
+        <div class="game">Gibberish Switch</div>
+        <div class="game">New Choice</div>
+        <div class="game">Entrances and Exits</div>
+        <div class="game">Number of Words</div>
+        <div class="game">World's Worst</div>
+        <div class="game">Shrinking Scene</div>
+        <div class="game">Growing and Shrinking</div>
+
+        <div class="cat-header">Long Form</div>
+        <div class="game">Montage</div>
+        <div class="game">Town Hall</div>
+        <div class="game">Repeater</div>
+        <div class="game">La Ronde</div>
+        <div class="game">French Braid</div>
+        <div class="game">Slacker</div>
+        <div class="game">Two Chairs</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
