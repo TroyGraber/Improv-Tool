@@ -2519,8 +2519,10 @@ function printSetList() {
 
     document.getElementById('show-setlist').innerHTML = html;
     document.body.classList.add('printing-setlist');
-    window.print();
-    document.body.classList.remove('printing-setlist');
+    setTimeout(() => {
+        window.print();
+        document.body.classList.remove('printing-setlist');
+    }, 150);
 }
 
 </script>
