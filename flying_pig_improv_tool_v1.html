@@ -7858,7 +7858,9 @@ function renderCustomShow() {
 
     // Build available panel
     let availHtml = '<input class="custom-search" id="custom-search" placeholder="Filter activities…" oninput="filterCustomAvail()" />';
-    Object.keys(groups).sort().forEach(cat => {
+    const SECTION_ORDER = ['Show Craft', 'Short Form', 'Long Form', 'Closers'];
+    const sortedCats = SECTION_ORDER.filter(c => groups[c]).concat(Object.keys(groups).filter(c => !SECTION_ORDER.includes(c)).sort());
+    sortedCats.forEach(cat => {
         const items = groups[cat];
         availHtml += `<div class="custom-section-label">${cat}</div>`;
         items.forEach(a => {
@@ -8030,4 +8032,7 @@ function printSetList() {
   </div>
 </div>
 
-<div id="show-setlist" 
+<div id="show-setlist" style="display:none"></div>
+
+</body>
+</html>
