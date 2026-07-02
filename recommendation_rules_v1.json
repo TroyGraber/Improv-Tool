@@ -92,8 +92,9 @@
       "french-braid",
       "slacker",
       "repeater",
-      "growing-and-shrinking",
-      "two-chairs"
+      "two-chairs",
+      "3-rooms",
+      "scramble"
     ],
     "advancedLongForms": [
       "montage",
@@ -103,13 +104,15 @@
       "french-braid",
       "slacker",
       "two-chairs",
-      "growing-and-shrinking"
+      "3-rooms",
+      "scramble"
     ],
     "longFormPlacementSpecialCases": {
       "town-hall": "show_opener"
     },
     "confirmedShortFormNotLongForm": [
-      "four-square"
+      "four-square",
+      "growing-and-shrinking"
     ],
     "beginnerAlwaysExclude": [
       "one-minute-scenes",
@@ -305,9 +308,9 @@
           "Closer"
         ],
         "excludeCategories": [
-          "Short Form Games",
-          "Long Form Structures and Techniques",
-          "Show Openings and Closings"
+          "Short Form",
+          "Long Form",
+          "Show Craft"
         ],
         "excludeActivityIds": [
           "one-minute-scenes",
@@ -368,7 +371,7 @@
             1,
             3
           ],
-          "candidateRule": "advancedClassSuitability_Skills",
+          "candidateRule": "advancedClassSuitability_Exercise",
           "regeneratable": true
         },
         {
@@ -394,7 +397,8 @@
             "french-braid",
             "slacker",
             "two-chairs",
-            "growing-and-shrinking"
+            "3-rooms",
+            "scramble"
           ],
           "candidateRule": "advancedClassSuitability_Longform",
           "selectionWeighting": "equal_rotation",
@@ -434,7 +438,7 @@
       "candidateFilters": {
         "includeIfAdvancedSuitabilityContainsAny": [
           "Warmup",
-          "Skills",
+          "Exercise",
           "Shortform",
           "Longform",
           "Closer"
@@ -476,12 +480,7 @@
           "slotId": "show_required_guessing_game",
           "slotLabel": "Guessing game (required)",
           "count": 1,
-          "candidatePool": [
-            "why-were-you-late",
-            "the-dating-game",
-            "job-interview",
-            "home-shopping-network-hsn"
-          ],
+          "candidatePoolRef": "globalActivityOverrides.guessingGames",
           "selectionWeighting": "equal_rotation",
           "regeneratable": true
         },
@@ -505,8 +504,9 @@
             "french-braid",
             "slacker",
             "repeater",
-            "growing-and-shrinking",
-            "two-chairs"
+            "two-chairs",
+            "3-rooms",
+            "scramble"
           ],
           "selectionWeighting": "equal_rotation",
           "placement": "last_game_before_filler",

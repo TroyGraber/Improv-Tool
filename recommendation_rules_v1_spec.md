@@ -184,7 +184,8 @@ Advanced long-form rotation should include:
 - French Braid
 - Slacker
 - Two Chairs
-- Growing and Shrinking
+- 3 Rooms
+- Scramble
 
 Use equal rotation unless later overridden.
 
@@ -265,8 +266,11 @@ Guessing-game pool:
 - The Dating Game
 - Job Interview
 - Home Shopping Network / HSN
+- Detective
 
 Use equal rotation.
+
+The pool is defined by the `guessingGames` array in `recommendation_rules_v1.json` (`globalActivityOverrides.guessingGames`); any game added there joins the rotation automatically.
 
 Do **not** count these as guessing games:
 
@@ -284,8 +288,9 @@ Show long-form pool:
 - French Braid
 - Slacker
 - Repeater
-- Growing and Shrinking
 - Two Chairs
+- 3 Rooms
+- Scramble
 
 Use equal rotation.
 
@@ -321,6 +326,8 @@ Avoid complex or slow games first.
 **Four Square** is a strong opener candidate and is often the first short-form game, but it should not be forced every time.
 
 Four Square counts as **short form**, not long form.
+
+**Growing and Shrinking** also counts as **short form**, not long form. It was removed from the advanced and show long-form pools on 2026-07-02 and remains eligible as a short-form game.
 
 ## Show Format Variety
 
@@ -398,8 +405,4 @@ The future HTML tool should embed:
 
 1. `flying_pig_activity_dataset_v1.json`
 2. `recommendation_rules_v1.json`
-3. JavaScript logic for search, filtering, expansion, scoring, lineup generation, and slot regeneration.
-
-If a slot has no valid candidates, the tool should relax soft preferences before violating hard constraints.
-
-Hard constraints should generally never be violated silently.
+3. JavaScript logic for search, filtering, expansion, scoring, lineup generation, and slot regen
