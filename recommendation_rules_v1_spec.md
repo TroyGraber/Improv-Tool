@@ -102,6 +102,8 @@ Beginner recommendations should exclude by default:
 
 Beginner class usually caps out around **3-Line Scenes**. It does **not** use **1 Minute Scenes**.
 
+Exception: **Complaint Letter / 1 Star Review** is classified as Short Form (it is show-credible) but remains beginner-eligible as a circle exercise. Beginner eligibility follows the `beginnerClassSuitability` tier, with `beginnerEligibleShortForm` in the rules JSON recording the exception.
+
 ## Beginner Difficulty
 
 Allow:

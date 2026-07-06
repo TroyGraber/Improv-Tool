@@ -114,6 +114,9 @@
       "four-square",
       "growing-and-shrinking"
     ],
+    "beginnerEligibleShortForm": [
+      "complaint-letter-3-words-at-a-time"
+    ],
     "beginnerAlwaysExclude": [
       "one-minute-scenes",
       "5-second-delay"

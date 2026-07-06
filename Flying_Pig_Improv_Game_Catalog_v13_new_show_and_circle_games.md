@@ -101,6 +101,12 @@ This version adds Best Friends under Scene, Character, and Story Exercises. Entr
 
 Added **Status Inversion** (Skills Exercise / Status Scene Drill) to Scene, Character, and Story Exercises. Two-player drill where players receive an uneven relationship then reverse the actual power dynamic while keeping the external roles intact. Observed at Flying Pig with a guest teacher who emphasized making the inversion obvious to the audience. Added to all three data files; activityCount updated 81 → 82.
 
+## V24 Update Note
+This version reclassifies Complaint Letter / Complaint Letter 3 Words at a Time from Warmups and Focus Exercises to Short Form Games, after Troy practiced it in class (2026-07-02, 10 players) and observed it in a show (2026-07-03, host + 5 players). Confirmed: circle or line formation; exactly three words per player; the coach or host calls the ending; in shows the complaint topic is an audience suggestion. Alternative title confirmed as 1 Star Review. The game remains beginner-suitable as a circle exercise.
+
+## V25 Addition Note
+This version adds Thunderdome under Short Form Games, observed as the first game of the 2026-07-03 Flying Pig show and described by Troy. It is a two-team rhythm elimination category game hosted with a squeaky-pig beat and an audience chant. A circle-duel version of Thunderdome is documented in the wider improv community; the Flying Pig version is a team-line variant.
+
 ## Class Structures and Rituals
 
 ### Jesse’s Opening Meditation
@@ -1331,102 +1337,6 @@ After the final breath and sigh, students are asked to open their eyes.
 - This reflects a recurring Flying Pig teaching priority: do not overplay the bit after the audience or group already understands the offer.
 ---
 
-### Complaint Letter / Complaint Letter 3 Words at a Time
-**Type:** Warmup / Circle Writing Exercise  
-**Standard:** Common improv complaint-letter exercise with Flying Pig 3-words-at-a-time variant observed  
-**Common Names:** Complaint Letter; Complaint Letter 3 Words at a Time; Bad Review (possible alternate name, unconfirmed)  
-**Observed In:** Flying Pig class warmups / exercises  
-**Status:** Partial / Troy-described; exact Flying Pig title not yet confirmed
-
-**Purpose**
-- Practice group writing.
-- Build shared sentence construction.
-- Train listening to the immediately prior words.
-- Practice tone and point of view through a complaint format.
-- Encourage players to support grammar and clarity.
-- Develop restraint, continuity, and group momentum.
-- Warm up verbal collaboration before more complex scene work.
-
-**Setup**
-- Players stand or sit in a circle.
-- The coach gives the group something to complain about.
-- The group collectively writes a complaint letter.
-- Each player contributes exactly three words at a time.
-- The letter proceeds around the circle until it reaches a natural ending.
-
-**Sequence of Play**
-1. The coach supplies the complaint topic.
-2. The first player begins the complaint letter with three words.
-3. The next player adds exactly three more words.
-4. Each following player continues the letter with three words.
-5. Players must listen to the words immediately before their turn and continue the sentence or thought clearly.
-6. The group continues around the circle.
-7. The letter should maintain the tone of a complaint letter or bad review.
-8. The group should eventually land a natural ending.
-9. The coach may call the ending, or the group may finish when the letter clearly resolves.
-
-**Important Rules**
-- Each player contributes exactly three words.
-- The contribution should support the existing grammar and thought.
-- Players should not restart the letter unless the structure clearly calls for a new sentence or paragraph.
-- Players should maintain the complaint-letter frame.
-- The exercise is about shared writing, not individual jokes.
-- A clear continuation is usually better than a clever derailment.
-
-**Skills Developed**
-- Listening.
-- Grammar awareness.
-- Group writing.
-- Sentence construction.
-- Tone maintenance.
-- Complaint POV.
-- Restraint.
-- Verbal support.
-- Continuity.
-- Shared momentum.
-- Recognizing natural endings.
-
-**Common Failure Modes**
-- Players give fewer or more than three words.
-- Players ignore the immediately previous words.
-- The letter loses the complaint frame.
-- Players force jokes instead of supporting the sentence.
-- The grammar breaks because players plan ahead instead of listening.
-- The group over-extends after the letter has naturally ended.
-- Players add random content instead of continuing the shared thought.
-- The complaint becomes too vague or generic.
-- The exercise drifts into a story instead of a letter or review.
-- Players hesitate because they are trying to craft the perfect three words.
-
-**Coaching Notes**
-- Listen to the last few words before your turn.
-- Serve the sentence first.
-- Keep the complaint tone alive.
-- Specific complaints are stronger than generic negativity.
-- The three-word constraint gives more room than one-word-at-a-time, but it also gives players more room to derail the group.
-- The strongest contributions preserve grammar, tone, and direction.
-- The group should aim for a coherent complaint letter, not a pile of isolated jokes.
-- End at the first satisfying completion point rather than dragging the bit too long.
-
-**What Success Looks Like**
-- The letter sounds like one shared complaint.
-- The grammar mostly holds together.
-- The complaint topic remains clear.
-- Players contribute quickly and confidently.
-- The tone stays consistent.
-- The group lands a satisfying final line or signoff.
-- The exercise builds verbal focus and group momentum.
-
-**Flying Pig Specific Notes**
-- Troy remembers this as likely called Complaint Letter 3 Words at a Time.
-- It may have been called Bad Review or simply Complaint Letter.
-- The observed Flying Pig version was a circle game.
-- Each player contributed three words at a time.
-- The coach gave the group the thing being complained about.
-- Preserve the name uncertainty until the exact Flying Pig title is confirmed.
-- Cataloged under the complaint-letter name because that appears to be the most standard/common structure.
-
-
 ### Mind Meld
 **Type:** Exercise  
 **Standard:** Yes  
@@ -2573,6 +2483,7 @@ The “Because of that…” prompt often repeats many times in the middle.
   - limit each pair to a short rep.
 - For a large class, strict resets can make the exercise consume too much time and create dread rather than skill growth.
 - The goal is not obedience to a stopwatch; the goal is alive silence, listening, and playable reaction.
+- This game trains what “slow down” actually means at Flying Pig: not slower thinking, but non-verbal life between lines — space work, object work, and physical reaction before speech (General Lesson 19).
 
 **Flying Pig Specific Notes**
 - This exercise is used rarely.
@@ -2696,10 +2607,10 @@ The “Because of that…” prompt often repeats many times in the middle.
 
 ### Gets Emotional
 **Type:** Character Exercise / Scene Exercise  
-**Standard:** Unknown / Needs Review  
-**Working Name:** Gets Emotional  
-**Observed In:** Class Exercises  
-**Status:** Partial documentation; exact official name unknown
+**Standard:** Unknown; likely Flying Pig house endowment exercise (related to the Character Walk family)  
+**Working Name:** Gets Emotional (Troy's placeholder — a pun on improv "gets"; kept deliberately, since "character gets" is used in class as a technique term and should not double as a game name)  
+**Observed In:** Thursday advanced class exercises  
+**Status:** Reviewed / Troy-practiced twice (2026-07-06)
 
 **Purpose**
 - Build characters quickly from external descriptive offers.
@@ -2709,14 +2620,14 @@ The “Because of that…” prompt often repeats many times in the middle.
 - Practice starting scenes with a defined character point of view rather than a neutral self-state.
 
 **Setup**
-- Two or three players perform a scene.
-- Each player receives one to three descriptive gets.
-- The gets may include adjectives, character attributes, or a first name.
-- The players use those gets to build their characters before or during the scene.
-- The scene then proceeds normally, with each player embodying the character implied by their gets.
+- Before the exercise, each student thinks of three real people they know — a first name and a word describing their personality.
+- Two players perform a scene.
+- Each player receives two describing words and one first name; the coach points at a different off-stage student for each get.
+- Because the gets come from different students, the traits are often misaligned (e.g., "Nervous, Boisterous Henry") — that tension is part of the exercise.
+- The players build their characters from the combination, then play the scene in character.
 
 **Documented Flying Pig Version**
-- When Troy played this once, the class was instructed before the exercise to think of three real people in their lives.
+- Troy has played this twice. Before the exercise, the class was instructed to think of three real people in their lives.
 - For each person, students were asked to think of: the person's first name, and one vivid word that describes them.
 - When players went on stage, each player received: two describing words, and one first name.
 - Each of the three gets came from a different student.
@@ -2728,12 +2639,13 @@ The “Because of that…” prompt often repeats many times in the middle.
 
 **Sequence of Play**
 1. The coach prepares the class by having students think of real people and vivid descriptors.
-2. Two or three players are selected for the scene.
-3. Each player receives character gets from the class or audience.
+2. Two players are selected for the scene.
+3. Each player receives two describing words and one first name, the coach pointing at a different off-stage student for each.
 4. Each player combines their gets into a playable character.
 5. The players begin a scene using those character choices.
 6. The scene continues with the players sustaining and heightening the characters created from the gets.
-7. The exercise may be coached based on how clearly the attributes affected character behavior.
+7. The coach cuts the scene — typically around one minute.
+8. The exercise may be coached based on how clearly the attributes affected character behavior.
 
 **Rules**
 - Use the gets to build the character.
@@ -2789,13 +2701,12 @@ The “Because of that…” prompt often repeats many times in the middle.
 - The audience or class can recognize how the original gets shaped the performance.
 
 **Flying Pig Specific Notes**
-- Troy remembers playing this once.
-- The exercise used two or three players.
-- Each player received one to three adjectives or character attributes.
-- In the documented version, each player received two describing words and one first name.
-- The describing words and name came from different students.
-- Students generated the source material by thinking of real people in their lives and choosing vivid descriptive words for them.
-- Exact official name, time limit, and full coaching emphasis are not yet documented.
+- Troy has played this twice, both in Thursday advanced class. Not used in beginner class.
+- Exactly two players; each receives two describing words and one first name, each get from a different off-stage student selected by the coach pointing.
+- Students generate the source material by thinking of three real people they know (first name + one personality descriptor each).
+- Misaligned trait combinations ("Nervous, Boisterous Henry") are common and desirable.
+- The coach cuts each scene, typically around one minute.
+- "Gets Emotional" is Troy's placeholder name (a pun on improv gets); Jesse's name for it, if any, is unknown.
 
 ---
 
@@ -2868,6 +2779,7 @@ The “Because of that…” prompt often repeats many times in the middle.
 - Strong lines are simple and active: "You came back." / "I saved your booth." / "That isn't coffee." / "You owe me." / "Please sit down."
 - The best version creates subtext because players cannot explain everything directly.
 - Emotional reaction should remain readable even when language is minimal.
+- “Slow down” here does not mean think slower: it means do space and object work, react physically before speaking, and put more non-verbal communication between verbal moments (General Lesson 19). Newer players often hear it as a contradiction of fast-reaction games — it isn't; it's a different skill.
 
 **What Success Looks Like**
 - The scene remains active despite limited dialogue.
@@ -2891,10 +2803,10 @@ The “Because of that…” prompt often repeats many times in the middle.
 
 ### 10 Characters in 60 Seconds
 **Type:** Solo Character Exercise / Audition Exercise  
-**Standard:** Unknown / Needs Review  
-**Observed In:** Auditions  
-**Observed Frequency:** Observed once  
-**Status:** Partial documentation; core rule remembered clearly
+**Standard:** Unknown; name confirmed as used at Flying Pig  
+**Observed In:** Auditions only  
+**Observed Frequency:** Observed once (Troy performed it)  
+**Status:** Reviewed / Troy-performed in auditions (2026-07-06)
 
 **Purpose**
 - Test character range under time pressure.
@@ -2908,6 +2820,10 @@ The “Because of that…” prompt often repeats many times in the middle.
 - One player performs alone.
 - The player has 60 seconds.
 - During that time, the player must demonstrate 10 distinct characters.
+- The player simply goes; the coach times and counts.
+- Characters are fully player-invented — no prompts or suggestions.
+- Only clearly distinct, readable characters are counted: a player may perform more, but blurred characters do not count toward the 10. (Troy performed roughly 12; the coach credited 10.)
+- Running a few seconds over the minute was tolerated.
 - The exercise appears to be more appropriate for advanced class, auditions, or targeted character training than beginner class.
 
 **Sequence of Play**
@@ -2973,17 +2889,17 @@ The “Because of that…” prompt often repeats many times in the middle.
 - It was a one-person exercise.
 - The player had to demonstrate 10 characters in 60 seconds.
 - Troy remembers this as the only part of the audition where he "straight sucked."
-- Troy classifies this as an advanced class exercise.
-- Exact official name, prompting method, and whether the player receives any character suggestions are not yet documented.
+- Troy classifies this as an advanced class exercise, though it has only been observed in auditions.
+- Name confirmed: 10 Characters in 60 Seconds. No prompting: the player invents all characters; the coach times and counts, crediting only clearly readable characters.
 
 ---
 
 ### It's Tuesday
 **Type:** Solo Emotional Range Exercise / Audition Exercise  
-**Standard:** Unknown / Needs Review  
-**Observed In:** Auditions  
-**Observed Frequency:** Observed once  
-**Status:** Partial documentation; core rule remembered clearly
+**Standard:** Unknown; possible Flying Pig house exercise  
+**Observed In:** Auditions; advanced (Thursday) practice  
+**Observed Frequency:** Regular — Troy has performed it several times in advanced practice  
+**Status:** Reviewed / Troy-practiced (2026-07-06)
 
 **Purpose**
 - Test emotional range under pressure.
@@ -3009,7 +2925,7 @@ The “Because of that…” prompt often repeats many times in the middle.
 4. The player talks themself through the situation.
 5. Over the course of the scene, the player must demonstrate three distinct large emotional states.
 6. The emotions should be clear, readable, and meaningfully different from each other.
-7. The scene ends after the emotional progression has been demonstrated.
+7. The player calls their own ending once the three emotions have been demonstrated.
 
 **Rules**
 - The get should be mundane.
@@ -3019,6 +2935,8 @@ The “Because of that…” prompt often repeats many times in the middle.
 - The player should not merely name the emotions.
 - The emotional states should be performed through voice, body, face, rhythm, point of view, and behavior.
 - The ordinary get should remain connected to the scene.
+- Exactly three emotions — the player calls their own ending after the third.
+- The get is supplied by the coach or the class.
 
 **Skills Developed**
 - Emotional range.
@@ -3042,6 +2960,9 @@ The “Because of that…” prompt often repeats many times in the middle.
 - The player chooses emotionally restrained or ironic reactions.
 - The player rushes through the emotions without letting each one land.
 - The player cannot justify why an ordinary statement matters so much.
+- The player sneaks in a fourth emotion instead of ending after three.
+- The player calls the ending but only two emotions were readable.
+- The player jumps directly from one emotion to the next without a change in the scene to motivate the shift.
 
 **Coaching Notes**
 - The point is not realism; the point is emotional availability and readability.
@@ -3050,6 +2971,10 @@ The “Because of that…” prompt often repeats many times in the middle.
 - Each emotional shift should have a playable reason, even if the reason is heightened or absurd.
 - The player should avoid subtle disappointment, detached irony, or intellectual commentary unless the exercise specifically allows restrained emotional modes.
 - The strongest version makes the ordinary get feel theatrically important through the player's emotional life.
+- Most coaching is about readability: make each emotion land in the body, not just the words.
+- Link each emotional shift to a change in the scene — do not jump directly from one emotion to the next.
+- Use movement, not just voice.
+- If coached to “slow down,” it means react physically before speaking and let non-verbal work carry the emotional shifts — not think slower (General Lesson 19).
 
 **What Success Looks Like**
 - The player creates three clearly different emotional states.
@@ -3067,8 +2992,12 @@ The “Because of that…” prompt often repeats many times in the middle.
 - One remembered get was: "I should mow my lawn sometime this week."
 - The player performed a one-person scene.
 - The player had to talk themself through three big emotions.
-- Troy classifies this as suitable only for advanced classes or auditions.
-- Exact time limit, official coaching language, and whether the three emotions were assigned or player-chosen are not yet documented.
+- Also used regularly in advanced (Thursday) practice; Troy has performed it several times. Never used in beginner (Saturday) practice — it is one of the most challenging games for a lot of players.
+- The get is supplied by the coach or the class.
+- No fixed time limit: the player calls their own ending after the third emotion.
+- The three emotions are player-chosen.
+- Common struggles: sneaking in a fourth emotion, or calling the ending with only two emotions readable.
+- Coaching emphasis: emotional readability; link each shift to a change in the scene rather than jumping between emotions; use movement, not just voice.
 
 ---
 
@@ -5607,6 +5536,7 @@ Another possible set:
 - The best translations give the actors a next playable move.
 - If an actor gives too little gibberish, the host may still translate from body language, facial expression, or silence.
 - The hosts should make the actors look intentional, not expose that they are struggling.
+- Leave space between offers: don't talk over your translator. The beat between gibberish and translation is where the game lives (General Lesson 20).
 
 **Flying Pig Specific Notes**
 - Flying Pig runs this as a four-player short-form game.
@@ -5845,6 +5775,8 @@ The best replacements often change intention, relationship, status, emotion, dan
 - The audience enjoys watching the performer abandon safety and discover something better.
 - The best versions keep the relationship alive while the details mutate.
 - Teaching phrase: “Don’t give me a new word. Give me a new world.”
+- On a genre call, the genre changes but the scene does not: if the players were talking about cars and the genre shifts to Western, they are still talking about cars. Shifting to a new topic (suddenly discussing drinks) is not ideal.
+- Leave a beat between lines so the caller has room to call — talking over each other buries the calls that make the game work (General Lesson 20).
 
 **Flying Pig Specific Notes**
 - Flying Pig and the Clockwork group play New Choice often.
@@ -6319,6 +6251,175 @@ Each exit returns the remaining players to the scene they were doing before that
 - This form likely fits Troy’s structural strengths, but it also pressures memory and clean scene labeling.
 
 ---
+
+### Complaint Letter / Complaint Letter 3 Words at a Time
+**Type:** Short Form Game / Circle Writing Exercise  
+**Standard:** Common improv complaint-letter exercise with Flying Pig 3-words-at-a-time variant confirmed  
+**Common Names:** Complaint Letter; Complaint Letter 3 Words at a Time; 1 Star Review  
+**Observed In:** Flying Pig class warmups / exercises; Flying Pig show (2026-07-03)  
+**Status:** Reviewed / Troy-practiced and show-observed (2026-07-06)
+
+**Purpose**
+- Practice group writing.
+- Build shared sentence construction.
+- Train listening to the immediately prior words.
+- Practice tone and point of view through a complaint format.
+- Encourage players to support grammar and clarity.
+- Develop restraint, continuity, and group momentum.
+- Warm up verbal collaboration before more complex scene work.
+- Provide a reliable, audience-readable group game for shows.
+
+**Setup**
+- Players stand or sit in a circle or a line.
+- In class, the coach gives the group something to complain about. In shows, a host takes an audience suggestion for the complaint topic.
+- The group collectively writes a complaint letter (a "1 star review").
+- Each player contributes exactly three words at a time.
+- The letter proceeds around the circle or down the line until it reaches a natural ending.
+
+**Sequence of Play**
+1. The coach or host supplies the complaint topic (an audience get in shows).
+2. The first player begins the complaint letter with three words.
+3. The next player adds exactly three more words.
+4. Each following player continues the letter with three words.
+5. Players must listen to the words immediately before their turn and continue the sentence or thought clearly.
+6. The group continues around the circle or down the line.
+7. The letter should maintain the tone of a complaint letter or bad review.
+8. The group should eventually land a natural ending.
+9. The coach or host may call the ending, or the group may finish when the letter clearly resolves.
+
+**Important Rules**
+- Each player contributes exactly three words.
+- The contribution should support the existing grammar and thought.
+- Players should not restart the letter unless the structure clearly calls for a new sentence or paragraph.
+- Players should maintain the complaint-letter frame.
+- The exercise is about shared writing, not individual jokes.
+- A clear continuation is usually better than a clever derailment.
+
+**Skills Developed**
+- Listening.
+- Grammar awareness.
+- Group writing.
+- Sentence construction.
+- Tone maintenance.
+- Complaint POV.
+- Restraint.
+- Verbal support.
+- Continuity.
+- Shared momentum.
+- Recognizing natural endings.
+
+**Common Failure Modes**
+- Players give fewer or more than three words.
+- Players ignore the immediately previous words.
+- The letter loses the complaint frame.
+- Players force jokes instead of supporting the sentence.
+- The grammar breaks because players plan ahead instead of listening.
+- The group over-extends after the letter has naturally ended.
+- Players add random content instead of continuing the shared thought.
+- The complaint becomes too vague or generic.
+- The exercise drifts into a story instead of a letter or review.
+- Players hesitate because they are trying to craft the perfect three words.
+
+**Coaching Notes**
+- Listen to the last few words before your turn.
+- Serve the sentence first.
+- Keep the complaint tone alive.
+- Specific complaints are stronger than generic negativity.
+- The three-word constraint gives more room than one-word-at-a-time, but it also gives players more room to derail the group.
+- The strongest contributions preserve grammar, tone, and direction.
+- The group should aim for a coherent complaint letter, not a pile of isolated jokes.
+- End at the first satisfying completion point rather than dragging the bit too long.
+
+**What Success Looks Like**
+- The letter sounds like one shared complaint.
+- The grammar mostly holds together.
+- The complaint topic remains clear.
+- Players contribute quickly and confidently.
+- The tone stays consistent.
+- The group lands a satisfying final line or signoff.
+- The exercise builds verbal focus and group momentum.
+
+**Flying Pig Specific Notes**
+- Confirmed title family: Complaint Letter, with alternative title 1 Star Review.
+- Played in a circle or a line.
+- Each player contributes exactly three words at a time.
+- Class: coach supplies the topic; observed with 10 players (2026-07-02).
+- Show: host takes an audience suggestion for the topic; observed with host + 5 players (2026-07-03).
+- Show-credible; reclassified from Warmups and Focus Exercises to Short Form Games (V24).
+- Remains beginner-suitable as a circle exercise despite the Short Form classification.
+
+
+### Thunderdome
+**Type:** Short Form Game / Rhythm Elimination Category Game  
+**Standard:** Known improv game (circle duel version documented elsewhere); Flying Pig plays a two-team line variant with rhythm and audience chant  
+**Common Names:** Thunderdome; related to the standard rhythm game Categories  
+**Observed In:** Flying Pig show (2026-07-03, first game of the show)  
+**Status:** Reviewed / Troy show-observed and described (2026-07-06)
+
+**Purpose**
+- Train quick recall under pressure.
+- Practice holding a rhythm while thinking.
+- Build listening (tracking what has already been said).
+- Provide a high-energy, audience-readable show opener.
+- Exercise graceful failure and fast rotation.
+
+**Setup**
+- A host plus 4 or more players.
+- Players divide into two roughly equal teams, each forming a line.
+- The front player of each line is the active player.
+- The host establishes a steady rhythm (observed: squeaking a toy pig; any rhythm-keeper works).
+
+**Sequence of Play**
+1. The host calls out a domain (e.g., Dog Breeds, Countries in Africa, Frozen Foods).
+2. The host maintains the rhythm throughout.
+3. The two active players alternate on the beat, each naming something that falls in the domain.
+4. A player fails by falling behind the rhythm, repeating something already said, or naming something outside the domain.
+5. A failed player goes to the back of their line and the next player steps up as active.
+6. In shows, the audience is encouraged to chant "Thunderdome! Thunderdome!" each time a new player becomes active.
+7. The host may call a new domain to keep the game fresh.
+8. The game is time-boxed: the host declares the end. There is no formal winner.
+
+**Important Rules**
+- Answers must land on the beat — hesitation is failure.
+- No repeats.
+- Answers must genuinely fit the domain; the host adjudicates.
+- Rotation is immediate; keep the game moving.
+
+**Skills Developed**
+- Quick recall.
+- Rhythm and timing.
+- Listening and tracking.
+- Category thinking.
+- Performing under pressure.
+- Ensemble rotation and graceful failure.
+
+**Common Failure Modes**
+- Players freeze rather than throwing out an imperfect answer.
+- The rhythm drags or accelerates, making the game unreadable.
+- Lines bunch up instead of rotating crisply.
+- The host lets a dead domain run too long.
+
+**Coaching Notes**
+- The rhythm is the game. The host must keep it steady and audible.
+- Coach players to step to the back cheerfully — the rotation is part of the fun.
+- Change domains before they run dry.
+- In class, the coach hosts; the structure is otherwise identical (no chant needed).
+
+**What Success Looks Like**
+- Answers snap onto the beat.
+- Rotations are fast and celebrated.
+- The audience joins the chant without prompting by mid-game.
+- Energy rises as domains get harder.
+
+**Flying Pig Specific Notes**
+- First game of the observed show (2026-07-03).
+- Host kept rhythm by squeaking a toy pig.
+- Two roughly equal teams in lines; active players alternate on the beat.
+- Failure = falling behind, repeating, or missing the domain; failed player to the back of the line.
+- Audience chants "Thunderdome! Thunderdome!" at each rotation.
+- Time-boxed; host declares the end; no formal winner.
+- Suitable for any show short-form slot except the guessing-game slot; also suitable for advanced practice with the coach hosting.
+
 
 ## Long Form Structures and Techniques
 
@@ -6883,7 +6984,8 @@ Repeater uses a repeated line from inside the active scene as the edit into a ne
 **Known Flying Pig Notes**
 - Troy has practiced French Braid.
 - Troy has seen French Braid performed.
-- Troy does not currently remember all exact Flying Pig-specific rules.
+- Flying Pig plays it with three strands — matching the braid metaphor (Troy-confirmed 2026-07-06).
+- Transition mechanics, opening, and ending remain unconfirmed (reviewed 2026-07-06). Troy recalls two Flying Pig long-form transition mechanics — (a) an off-scene player tapping in an on-scene player, and (b) off-scene players repeating a spoken line to trigger a group entrance beginning with that line — but cannot attribute them between French Braid and another form. Mechanic (b) is confirmed NOT to be Repeater — in Repeater the repetition happens on scene, by an on-scene player. The off-scene group-entrance version remains unattributed and may be French Braid's transition.
 - Keep this entry separate from 3 Rooms.
 - Mark any unverified Flying Pig-specific mechanics as needs review.
 
@@ -7535,6 +7637,8 @@ For catalog purposes, Character-Mention Chain should not remain as an independen
 16. Shoot the Deer — don’t talk around doing something; do it.
 17. Re-anchor in character — don’t spend too much time talking about the past or things that aren’t happening in the scene. If that starts to happen, re-anchor in the relationship.
 18. Take a physical action — if you don’t know what to say, immediately take a physical action. This is the default recovery tool.
+19. “Slow down” doesn’t mean think slower — it means add non-verbal life. Do space and object work, react physically before you speak, and put non-verbal communication between verbal moments. Fast games train reaction speed; slowing down trains physical presence. They are different skills, not a contradiction.
+20. Leave space for the caller or host — in called games such as New Choice and Foreign Film, leave a beat between lines of dialogue so the call or translation can land. Talking over each other breaks the game’s mechanism.
 
 ---
 
