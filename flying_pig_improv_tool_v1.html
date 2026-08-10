@@ -419,6 +419,17 @@ body {
 /* ── PRINT CSS ───────────────────────────── */
 @media print {
   body, * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  /* Mobile fix (2026-08-10): body's screen rule `min-height: 100vh` was never reset for
+     print. On phones `vh` resolves against the device screen, not the page box, so the
+     body could end up taller than the sheet and emit a trailing blank page. Reset the
+     box model explicitly and forbid a break after the panel grid. */
+  html, body {
+    min-height: 0 !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: white !important;
+  }
   #app-header, #tab-browse, #tab-lineup { display: none !important; }
   #print-view {
     display: grid !important;
@@ -527,6 +538,10 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
   }
+  /* Nothing may follow the panel grid onto a second sheet. */
+  #print-view { break-after: avoid !important; page-break-after: avoid !important; }
+  #print-view > *:last-child { break-after: avoid !important; page-break-after: avoid !important; }
+  #show-setlist, #activity-modal { display: none !important; }
   @page { margin: 0.25in; size: 8.5in 11in portrait; }
 }
 
@@ -696,6 +711,8 @@ body {
 
         /* ── Show Set List Print ── */
         @media print {
+            /* html/body box reset lives in the main @media print block above -- it is
+               un-gated, so it applies to this print path too. */
             body.printing-setlist #app-header,
             body.printing-setlist #tab-browse,
             body.printing-setlist #tab-lineup,
@@ -745,6 +762,9 @@ body {
                 display: flex; gap: 4pt; align-items: flex-end;
             }
             .sl-role-label { white-space: nowrap; color: #333; }
+            body.printing-setlist #show-setlist > *:last-child {
+                break-after: avoid !important; page-break-after: avoid !important;
+            }
         }
 </style>
 </head>
@@ -9057,7 +9077,7 @@ function renderLineup() {
     document.getElementById('lineup-display').innerHTML = `
     <div class="lineup-header">
         <div class="lineup-title-row"><h2>${label}</h2><span class="lineup-duration">${duration}</span></div>
-        ${(state.lineup && (state.lineup.mode==='show' || state.lineup.mode==='custom-show')) ? '<button class="print-btn" onclick="printSetList()">🎭 Print Set List</button>' : '<button class="print-btn" onclick="window.print()">🖨 Print Lineup</button>'}
+        ${(state.lineup && (state.lineup.mode==='show' || state.lineup.mode==='custom-show')) ? '<button class="print-btn" onclick="printSetList()">🎭 Print Set List</button>' : '<button class="print-btn" onclick="printLineup()">🖨 Print Lineup</button>'}
     </div>
     <div class="lineup-slots">${html}</div>`;
 }
@@ -9474,10 +9494,47 @@ function printSetList() {
 
     document.getElementById('show-setlist').innerHTML = html;
     document.body.classList.add('printing-setlist');
-    setTimeout(() => {
-        window.print();
-        document.body.classList.remove('printing-setlist');
-    }, 150);
+    bindSetlistPrintCleanup();
+    setTimeout(() => window.print(), 150);
+}
+
+/* Mobile fix (2026-08-10): the old code called window.print() and removed
+   `printing-setlist` on the very next line. On desktop window.print() blocks until the
+   dialog closes, so the class survived long enough to style the printout. On iOS Safari
+   and Chrome for Android window.print() returns immediately and the preview renders
+   asynchronously, so the class was already gone by the time the page was snapshotted --
+   the set-list rules never matched, #show-setlist stayed hidden, and the base @media
+   print block rendered the six-panel CLASS lineup instead. Hence "Print Set List gave me
+   something that looked like a class lineup," mobile only.
+
+   Cleanup is now event-driven. Leaving the class on is harmless (its rules live only
+   inside @media print, so it has no on-screen effect), so failing to fire costs nothing
+   visible -- but printLineup() also clears it defensively so a lingering class can never
+   hijack a later class-lineup print. */
+let _setlistCleanupBound = false;
+function endSetlistPrint() {
+    document.body.classList.remove('printing-setlist');
+}
+function bindSetlistPrintCleanup() {
+    if (_setlistCleanupBound) return;
+    _setlistCleanupBound = true;
+    window.addEventListener('afterprint', endSetlistPrint);
+    if (window.matchMedia) {
+        const mq = window.matchMedia('print');
+        const onChange = (m) => { if (!m.matches) endSetlistPrint(); };
+        if (mq.addEventListener) mq.addEventListener('change', onChange);
+        else if (mq.addListener) mq.addListener(onChange);
+    }
+    // Last resort for mobile browsers that fire neither of the above: the page loses
+    // focus while the share/print sheet is up and regains it on return.
+    window.addEventListener('focus', () => setTimeout(endSetlistPrint, 600));
+}
+
+// Class/advanced lineup printing. Always clears the set-list class first so the two
+// print paths can never be confused with each other.
+function printLineup() {
+    endSetlistPrint();
+    setTimeout(() => window.print(), 50);
 }
 
 </script>
