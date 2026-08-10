@@ -93,7 +93,6 @@
       "slacker",
       "repeater",
       "two-chairs",
-      "3-rooms",
       "scramble"
     ],
     "advancedLongForms": [
@@ -104,7 +103,6 @@
       "french-braid",
       "slacker",
       "two-chairs",
-      "3-rooms",
       "scramble"
     ],
     "longFormPlacementSpecialCases": {
@@ -112,7 +110,8 @@
     },
     "confirmedShortFormNotLongForm": [
       "four-square",
-      "growing-and-shrinking"
+      "growing-and-shrinking",
+      "3-rooms"
     ],
     "beginnerEligibleShortForm": [
       "complaint-letter-3-words-at-a-time"
@@ -134,7 +133,10 @@
     "showFillerGames": [
       "oh-waiter",
       "worlds-worst"
-    ]
+    ],
+    "_notes": {
+      "beginnerAlwaysExclude": "This list is reserved for the two activities explicitly named as beginner exclusions in recommendation_rules_v1_spec.md's prose (One Minute Scenes, 5 Second Delay) \u2014 it functions as a small, hand-maintained policy tripwire, independent of the per-activity beginnerClassSuitability metadata. 2026-08-10: discovered the HTML generator wasn't reading this list at all, so it existed as unenforced documentation while one-minute-scenes' metadata was separately (and wrongly) set to 'Mid' \u2014 patched the generator to honor it. Troy then correctly pointed out that ordinary advanced-only activities (empty beginnerClassSuitability) don't need a matching entry here to be excluded \u2014 they're already excluded the same way everything else is. best-friends and conducted-song-show-closing-conducted-song (Madrigals) were briefly added here same-day after their metadata was corrected, then removed as redundant \u2014 their corrected empty beginnerClassSuitability is sufficient on its own, same as every other advanced-only activity. Keep this list reserved for cases with an explicit prose citation, not as a general-purpose backup for ordinary metadata."
+    }
   },
   "scoreWeights": {
     "common": {
@@ -529,7 +531,7 @@
         },
         {
           "slotId": "show_conducted_song",
-          "slotLabel": "Conducted Song (optional — ~1 in 4 shows)",
+          "slotLabel": "Conducted Song (optional \u2014 ~1 in 4 shows)",
           "count": 1,
           "candidatePool": [
             "conducted-song-show-closing-conducted-song"

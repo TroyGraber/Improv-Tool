@@ -39,7 +39,7 @@ Regenerate should swap only that slot while preserving the broad role of the slo
 
 - Long-form slot → another eligible long-form
 - Guessing-game slot → another guessing game
-- Show final slot → **Oh Waiter** or **Conducted Song / Show-Closing Conducted Song**
+- Show final slot → **Oh Waiter** or **Madrigals** (aka Recapapella; formerly cataloged as "Conducted Song / Show-Closing Conducted Song")
 - Beginner circle-game slot → another beginner-eligible circle game or low-risk exercise
 - Beginner capstone slot → **3-Line Scenes** or **I Am a Tree**
 - Beginner closer slot → **Five Things** or **Name Game**
@@ -96,9 +96,12 @@ Use equal rotation between:
 Beginner recommendations should exclude by default:
 
 - all short-form show games,
-- **1 Minute Scenes**,
+- **One Minute Scenes**,
 - advanced-only exercises such as **5 Second Delay**,
+- **Best Friends**,
 - complex long-form structures.
+
+Enforcement note (2026-08-10): the `beginnerAlwaysExclude` list in the rules JSON was previously documented but never read by the HTML generator, which relied solely on each activity's `beginnerClassSuitability` metadata. One Minute Scenes was therefore still being generated into beginner lineups despite being listed here. The generator now honors `beginnerAlwaysExclude`, and the underlying metadata was corrected for One Minute Scenes, Best Friends, and Madrigals.
 
 Beginner class usually caps out around **3-Line Scenes**. It does **not** use **1 Minute Scenes**.
 
@@ -186,7 +189,6 @@ Advanced long-form rotation should include:
 - French Braid
 - Slacker
 - Two Chairs
-- 3 Rooms
 - Scramble
 
 Use equal rotation unless later overridden.
@@ -264,13 +266,15 @@ Every show recommendation should include **exactly 1 guessing game**.
 
 Guessing-game pool:
 
-- Why Were You Late?
+- Excuses (activity id `why-were-you-late` — renamed; id preserved)
 - The Dating Game
 - Job Interview
 - Home Shopping Network / HSN
-- Detective
+- LOW (Location, Occupation, Weapon) (activity id `detective` — renamed; id preserved)
 
 Use equal rotation.
+
+Note: two entries in this pool were renamed after their ids were assigned, and the ids were deliberately left alone to avoid breaking references. Names above corrected 2026-08-10; the spec previously listed the obsolete display names "Why Were You Late?" and "Detective."
 
 The pool is defined by the `guessingGames` array in `recommendation_rules_v1.json` (`globalActivityOverrides.guessingGames`); any game added there joins the rotation automatically.
 
@@ -291,7 +295,6 @@ Show long-form pool:
 - Slacker
 - Repeater
 - Two Chairs
-- 3 Rooms
 - Scramble
 
 Use equal rotation.
@@ -311,7 +314,7 @@ If the long-form is last, no extra final game is needed.
 If the long-form is second-to-last, the final game should be one of:
 
 - **Oh Waiter**
-- **Conducted Song / Show-Closing Conducted Song**
+- **Madrigals** (aka Recapapella; formerly cataloged under Troy's placeholder name "Conducted Song / Show-Closing Conducted Song". The activity id remains `conducted-song-show-closing-conducted-song` — it is hardcoded in the HTML generator, so the id was deliberately not renamed.)
 
 Use equal rotation between those two.
 
@@ -330,6 +333,8 @@ Avoid complex or slow games first.
 Four Square counts as **short form**, not long form.
 
 **Growing and Shrinking** also counts as **short form**, not long form. It was removed from the advanced and show long-form pools on 2026-07-02 and remains eligible as a short-form game.
+
+**3 Rooms** also counts as **short form**, not long form, matching the standard catalogued 3 Rooms mechanic (three paired scene-strands, cued transitions, a carried/repeated line linking them). It was removed from the advanced and show long-form pools on 2026-07-06 and added to `confirmedShortFormNotLongForm`, after an in-class disagreement (Alan vs. Jesse/dataset) and a show where it ran only ~5 minutes — well outside the previously assumed 15–25 min range. Runtime is unsettled; treat it as a normal, variable-length short-form game rather than a fixed-length slot-filler.
 
 ## Show Format Variety
 
